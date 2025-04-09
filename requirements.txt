@@ -1,8 +1,6 @@
-Flask==3.0.2
-Flask-SQLAlchemy==3.1.1
-PyMySQL==1.1.1
-python-dotenv==1.0.1
-flask-cors==4.0.0
-selenium==4.29.0
-peewee==3.16.0
-dotenv==0.0.5
+Flask
+Flask-SQLAlchemy
+PyMySQL
+python-dotenv
+flask-cors
+selenium
