@@ -1,0 +1,269 @@
+{
+	"Corte Suprema": {
+		"id": 1,
+		"table_id": "dtaTableDetalleMisCauSup",
+		"movimientos_id": "movimientosSup",
+		"modal_id": "modalDetalleMisCauSuprema",
+		"col_status": 4,
+		"col_institucion": 6,
+		"col_corte": 5, 
+		"col_date": 3,
+		"col_role": 1,
+		"col_title": 2,
+		"competitionsStatus": 1,
+		"movimientos":{
+			"folio": 0,
+			"doc": 1,
+			"anexo": 2,
+			"ano": 3,
+			"fecha": 4,
+			"tramite": 5,
+			"descripcion": 6,
+			"salas": 7,
+			"estado": 8
+		},
+		"audiencias": {
+
+		}
+	},
+	"Corte Apelaciones": {
+		"id": 2,
+		"table_id": "dtaTableDetalleMisCauApe",
+		"movimientos_id": "movimientosApe",
+		"modal_id": "modalDetalleMisCauApelaciones",
+		"col_status": 5,
+		"col_institucion": 8,
+		"col_corte": 2, 
+		"col_date": 4,
+		"col_role": 1,
+		"col_title": 3,		
+		"competitionsStatus": 1,
+		"movimientos":{		
+			"folio": 0,
+			"doc": 1,
+			"anexo": 2,
+			"tramite": 3,
+			"descripcion": 4,
+			"fecha": 5,
+			"sala": 6,
+			"estado": 7,
+			"georefencia": 8
+		},
+		"audiencias": {
+
+		}
+	},
+	"Civil": {
+		"id": 3,
+		"table_id": "dtaTableDetalleMisCauCiv",
+		"movimientos_id": "historiaCiv",
+		"modal_id": "modalDetalleMisCauCivil",
+		"col_status": 5,
+		"col_institucion": 7,
+		"col_corte": 2,
+ 		"col_date": 4,
+		"col_role": 1,
+		"col_title": 3,
+		"competitionsStatus": 1,
+		"movimientos":{			
+			"folio": 0,
+			"doc": 1,
+			"anexo": 2,
+			"etapa": 3,
+			"tramite": 4,
+			"descripcion": 5,
+			"fecha": 6,
+			"foja": 6,
+			"georefencia": 7
+		},
+		"audiencias": {
+
+		}
+	},
+	"Laboral": {
+		"id": 4,
+		"table_id": "dtaTableDetalleMisCauLab",
+		"movimientos_id": "movimientosLab",
+		"modal_id": "modalDetalleMisCauLaboral",
+		"col_status": 5,
+		"col_institucion": 6,
+		"col_corte": 2, 
+		"col_date": 4,
+		"col_role": 1,
+		"col_title": 3,		
+		"competitionsStatus": 0,
+		"movimientos":{			
+			"folio": 0,
+			"doc": 0,
+			"anexo": 0,
+			"etapa": 0,
+			"tramite": 0,
+			"descripcion": 0,
+			"fecha": 0,
+			"foja": 0,
+			"georefencia": 0
+		},
+		"audiencias": {
+			"id" : 0,
+			"rit": 1,
+			"fecha": 2,
+			"tribunal": 3,
+			"sala": 4,
+			"tipo audiencia": 5,
+			"ruc": 6,
+			"juez": 7,
+			"hora": 8,
+			"caratulado": 9
+		}
+	},
+	"Penal": {
+		"id": 5,
+		"table_id": "dtaTableDetalleMisCauPen",
+		"movimientos_id": "movimientosPen",
+		"modal_id": "modalDetalleMisCauPenal",
+		"col_status": 5,
+		"col_institucion": 7,
+		"col_corte": 3, 
+		"col_date": 5,
+		"col_role": 1,
+		"col_title": 4,		
+		"competitionsStatus": 0,
+		"movimientos":{			
+			"folio": 0,
+			"doc": 0,
+			"anexo": 0,
+			"etapa": 0,
+			"tramite": 0,
+			"descripcion": 0,
+			"fecha": 0,
+			"foja": 0,
+			"georefencia": 0
+		},
+		"audiencias": {
+			"id" : 0,
+			"ruc": 1,
+			"fecha": 2,
+			"tribunal": 3,
+			"estado" : 4,
+			"tipo audiencia": 5,
+			"juez": 6
+		}
+	},
+	"Cobranza": {
+		"id": 6,
+		"table_id": "dtaTableDetalleMisCauCob",
+		"movimientos_id": "movimientosCob",
+		"modal_id": "modalDetalleMisCauCobranza",
+		"col_status": 5,
+		"col_institucion": 6,
+		"col_corte": 2, 
+		"col_date": 4,
+		"col_role": 1,
+		"col_title": 3,		
+		"competitionsStatus": 0,
+		"movimientos":{			
+			"folio": 0,
+			"doc": 0,
+			"anexo": 0,
+			"etapa": 0,
+			"tramite": 0,
+			"descripcion": 0,
+			"fecha": 0,
+			"foja": 0,
+			"georefencia": 0
+		},
+		"audiencias": {
+
+		}
+	},
+	"Familia": {
+		"id": 7,
+		"table_id": "dtaTableDetalleMisCauFam",
+		"movimientos_id": "movimientoFam",
+		"modal_id": "modalDetalleMisCauFamilia",
+		"col_status": 5,
+		"col_institucion": 6,
+		"col_corte": 2, 
+		"col_date": 4,
+		"col_role": 1,
+		"col_title": 3,		
+		"competitionsStatus": 0,
+		"movimientos":{			
+			"folio": 0,
+			"doc": 1,
+			"anexo": 2,
+			"etapa": 3,
+			"estado": 4,
+			"tramite": 5,
+			"descripcion": 6,
+			"fecha": 7,
+			"georefencia": 8	
+		},
+		"audiencias": {
+			"id" : 0,
+			"rit": 1,
+			"ruc": 2,
+			"fecha": 3,
+			"tribunal": 4,
+			"sala": 5,
+			"tipo audiencia": 6,
+			"hora": 7,
+			"caratulado": 8,
+			"juez": 9
+
+		}
+	},
+	"Disciplinario": {
+		"id": 8,
+		"table_id": "dtaTableDetalleMisCauDisc",
+		"movimientos_id": "movimientosDisc",
+		"modal_id": "modalDetalleMisCauDisciplinario",
+		"col_status": 6,
+		"col_institucion": -1,
+		"col_corte": 2, 
+		"col_date": 5,
+		"col_role": 1,
+		"col_title": 4,		
+		"competitionsStatus": 0,
+		"movimientos":{			
+			"folio": 0,
+			"doc": 0,
+			"anexo": 0,
+			"etapa": 0,
+			"tramite": 0,
+			"descripcion": 0,
+			"fecha": 0,
+			"foja": 0,
+			"georefencia": 0
+		}	,
+		"audiencias": {
+
+		}
+	},
+	"Consulta Corte": {
+		"id": 9,
+		"table_id": "dtaTableDetalleMisCauSup",
+		"movimientos_id": "movimientosSup",
+		"modal_id": "modalDetalleMisCauSuprema",
+		"col_role": 1,
+		"col_title": 2,
+		"col_date": 3,
+		"col_status": 4,
+		"col_corte": 5, 
+		"col_institucion": 6,
+		"competitionsStatus": 1,
+		"movimientos":{
+			"folio": 0,
+			"doc": 1,
+			"anexo": 2,
+			"ano": 3,
+			"fecha": 4,
+			"tramite": 5,
+			"descripcion": 6,
+			"salas": 7,
+			"estado": 8
+		},
+		"audiencias": {
+		}
+	}
+}
