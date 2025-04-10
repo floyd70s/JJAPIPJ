@@ -4,3 +4,4 @@ PyMySQL
 python-dotenv
 flask-cors
 selenium
+requests
