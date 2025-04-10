@@ -6,3 +6,4 @@ flask-cors
 selenium
 requests
 cryptography
+peewee
