@@ -24,7 +24,7 @@ def buscar_causas(competencia, corte, tribunal, tipo_busqueda, libro, rol, ano):
     driver = None
     try:
         
-        geckodriver_path = os.getenv('GECKODRIVER_PATH')
+        geckodriver_path = os.getenv('GECKODRIVER_PATH_PROD')
         url_oficina = os.getenv('URLOficinaVirtual')
         url_busqueda = url_oficina.replace('indexN.php', 'home/index.php')
          
@@ -35,9 +35,10 @@ def buscar_causas(competencia, corte, tribunal, tipo_busqueda, libro, rol, ano):
         options.add_argument("--disable-gpu")
         options.add_argument("--window-size=1920,1080")
         
+        print(f"Iniciando Firefox con GeckoDriver en: {geckodriver_path}")
         service = Service(executable_path=geckodriver_path)        
         driver = webdriver.Firefox(service=service, options=options)
-        
+        print("Se inicializó el driver de Firefox")
         
         driver.get(url_busqueda)        
         print("Se abrió la URL", url_busqueda)
