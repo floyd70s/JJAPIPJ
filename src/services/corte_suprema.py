@@ -8,10 +8,12 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 
+from selenium.webdriver.firefox.options import Options as FirefoxOptions
+from selenium.webdriver.firefox.service import Service
+
 from dotenv import load_dotenv
 from utils.utils import Utils
 import time
-
 import os
 
 # Cargar variables de entorno desde el archivo .env
@@ -21,15 +23,22 @@ app = Flask(__name__)
 def buscar_causas(competencia, corte, tribunal, tipo_busqueda, libro, rol, ano):
     driver = None
     try:
-        # Se obtiene la URL de oficina desde las variables de entorno y se modifica la ruta
+        
+        geckodriver_path = os.getenv('GECKODRIVER_PATH')
         url_oficina = os.getenv('URLOficinaVirtual')
         url_busqueda = url_oficina.replace('indexN.php', 'home/index.php')
-    
-        # Obtén la ruta del geckodriver desde las variables de entorno
-        geckodriver_path = os.getenv('GECKODRIVER_PATH')
-    
-        # Configuración e inicio de Selenium con Firefox en modo headless
-        driver = Utils.initialize_driver(geckodriver_path, headless=True)
+         
+        options = FirefoxOptions()
+        options.add_argument("--headless")
+        options.add_argument("--no-sandbox")
+        options.add_argument("--disable-dev-shm-usage")
+        options.add_argument("--disable-gpu")
+        options.add_argument("--window-size=1920,1080")
+        
+        service = Service(executable_path=geckodriver_path)        
+        driver = webdriver.Firefox(service=service, options=options)
+        
+        
         driver.get(url_busqueda)        
         print("Se abrió la URL", url_busqueda)
         

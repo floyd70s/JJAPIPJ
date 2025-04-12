@@ -17,7 +17,7 @@ if __name__ == '__main__':
 #-------------------------------------------------------------------------------
 # MODO LOCAL
 #------------------------------------------------------------------------------
-# # api-casos.py
+# api-casos.py
 # from flask import Flask
 # from routes.corte_suprema import corte_suprema
 
