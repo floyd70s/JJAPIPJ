@@ -2,8 +2,8 @@ import requests
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import Select
+from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.firefox.service import Service
 from selenium.webdriver.firefox.options import Options
 from selenium.common.exceptions import TimeoutException, StaleElementReferenceException, NoSuchElementException
@@ -13,7 +13,6 @@ import urllib.parse
 from selenium.webdriver.common.keys import Keys
 import json
 from base64 import b64encode, b64decode
-from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
 from cryptography.hazmat.backends import default_backend
 import hashlib
 import smtplib
@@ -48,7 +47,7 @@ class Utils:
         Utils.log(f"Inicializando driver en modo {'headless' if headless else 'normal'}")
         service = Service(executable_path=GECKODRIVER_PATH)
         return webdriver.Firefox(service=service, options=options)
-
+    
     # Función para esperar y hacer clic en un elemento
     @staticmethod
     def wait_and_click(driver, by, locator, timeout=60):

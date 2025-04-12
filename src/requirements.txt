@@ -4,6 +4,7 @@ PyMySQL
 python-dotenv
 flask-cors
 selenium
+webdriver-manager
 requests
 cryptography
 peewee
