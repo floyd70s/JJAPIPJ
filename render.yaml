@@ -4,9 +4,7 @@ services:
     runtime: python
     buildCommand: |
       apt-get update
-      apt-get install -y wget curl gnupg2 ca-certificates lsb-release
-      echo "deb http://deb.debian.org/debian buster-backports main" | tee -a /etc/apt/sources.list
-      apt-get update
+      apt-get install -y wget curl gnupg2 ca-certificates lsb-release xvfb libxi6 libgconf-2-4 libnss3-dev libxrandr2 libasound2 fonts-liberation libappindicator3-1 xdg-utils
       apt-get install -y firefox-esr
       wget https://github.com/mozilla/geckodriver/releases/download/v0.34.0/geckodriver-v0.34.0-linux64.tar.gz
       tar -xvzf geckodriver-v0.34.0-linux64.tar.gz
