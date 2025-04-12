@@ -12,4 +12,5 @@ services:
       chmod +x /usr/local/bin/geckodriver
       pip install --upgrade pip
       pip install -r requirements.txt
-    startCommand: uvicorn api-casos:app --host 0.0.0.0 --port $PORT
+    startCommand: gunicorn --bind 0.0.0.0:$PORT api-casos:app
+
