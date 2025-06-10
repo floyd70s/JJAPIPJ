@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  selenium:
+    image: selenium/standalone-firefox:latest
+    ports:
+      - "4444:4444"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:4444/wd/hub/status"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  api:
+    build: .
+    ports:
+      - "5001:5000"
+    depends_on:
+      selenium:
+        condition: service_healthy
+    environment:
+      - MODE=docker
+      - URLOficinaVirtual=https://oficinajudicialvirtual.pjud.cl/indexN.php
