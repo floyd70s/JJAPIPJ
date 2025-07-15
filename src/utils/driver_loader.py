@@ -43,7 +43,7 @@ def _try_remote_driver(options, intentos, espera):
         try:
             print(f"🌐 Intento {intento}/{intentos} de conexión remota a Selenium...")
             driver = webdriver.Remote(
-                command_executor='https://selenium-firefox.onrender.com',
+                command_executor='http://localhost:4444/wd/hub',
                 options=options
             )
             print("✅ WebDriver remoto iniciado con éxito.")
