@@ -19,7 +19,7 @@ except Exception as e:
 
 # Detecta entorno de ejecución
 execution_env = os.environ.get("EXECUTION_ENV", "local")
-port = int(os.environ.get("PORT", 5000))
+port = int(os.environ.get("PORT", 5001))
 debug = (execution_env != "production")
 
 if __name__ == '__main__':

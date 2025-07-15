@@ -1,20 +1,26 @@
 FROM selenium/standalone-firefox:latest
 
+# Variables de entorno obligatorias para Render
+ENV PORT=10000
+ENV MODE=local
+ENV EXECUTION_ENV=production
+
+# Instala dependencias del sistema
 USER root
+RUN apt-get update && apt-get install -y python3-pip
 
-RUN apt-get update && apt-get install -y python3 python3-pip && apt-get clean
-RUN ln -s /usr/bin/python3 /usr/bin/python
-
+# Crea una carpeta para el código
 WORKDIR /app
 
-# Configurar PYTHONPATH para incluir el directorio /app
-ENV PYTHONPATH="/app"
+# Copia tus archivos de proyecto
+COPY . /app
 
-# copia solo el contenido de src y los archivos de configuración
-COPY src/ /app
-COPY .env requirements.txt /app/
+# Instala dependencias de Python
+RUN pip install --upgrade pip
+RUN pip install -r requirements.txt
 
-RUN pip install --no-cache-dir -r requirements.txt
+# Expone el puerto para Render
+EXPOSE 10000
 
-EXPOSE 5000
-CMD ["python", "api-casos.py"]
+# Comando de arranque
+CMD ["python3", "api-casos.py"]
