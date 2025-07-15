@@ -23,4 +23,4 @@ RUN pip install -r requirements.txt
 EXPOSE 10000
 
 # Comando de arranque
-CMD ["python3", "api-casos.py"]
+CMD ["python3", "src/api-casos.py"]
